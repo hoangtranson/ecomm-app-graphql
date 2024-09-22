@@ -30,7 +30,7 @@ const COURSES = [
   },
 
   {
-    id: "book-21",
+    id: "book-06",
     name: "The Immortals of Meluha",
     description: "Shiva Trilogy -1",
     price: 299.99,
@@ -57,4 +57,15 @@ const COURSES = [
   },
 ];
 
-module.exports = { GENRES, COURSES };
+const REVIEWS = [
+  {
+    id: "rev-01",
+    date: "2021-01-01",
+    title: "This is bad",
+    comment: "when i bought this it broke the computer",
+    rating: 1,
+    courseId: "book-06",
+  },
+];
+
+module.exports = { GENRES, COURSES, REVIEWS };

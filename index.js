@@ -3,7 +3,7 @@ const { typeDefs } = require("./schema");
 const { Query } = require("./resolvers/Query");
 const { Course } = require("./resolvers/Course");
 const { Genre } = require("./resolvers/Genre");
-const { COURSES, GENRES } = require("./database");
+const { COURSES, GENRES, REVIEWS } = require("./database");
 
 const server = new ApolloServer({
   typeDefs,
@@ -11,6 +11,7 @@ const server = new ApolloServer({
   context: {
     courses: COURSES,
     genres: GENRES,
+    reviews: REVIEWS
   }
 });
 
