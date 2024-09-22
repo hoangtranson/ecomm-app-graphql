@@ -9,6 +9,10 @@ exports.typeDefs = gql`
     genre(id: ID!): Genre
   }
 
+  type Mutation {
+    addGenre(input: AddGenreInput!): Genre!
+  }
+
   type Course {
     name: String!
     description: String!
@@ -34,5 +38,9 @@ exports.typeDefs = gql`
 
   input CoursesFilter {
     discount: Boolean
+  }
+
+  input AddGenreInput {
+    name: String!
   }
 `;
