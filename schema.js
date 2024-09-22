@@ -3,11 +3,7 @@ const { gql } = require("apollo-server");
 // There are four scalar types in GraphQL: String, Int, Float, and Boolean
 exports.typeDefs = gql`
   type Query {
-    welcome: String
-    numOfCourses: Int
-    price: Float
-    isTrainer: Boolean
-    courses: [Course!]!
+    courses(filter: CoursesFilter): [Course!]!
     course(id: ID!): Course
     genres: [Genre!]!
     genre(id: ID!): Genre
@@ -34,5 +30,9 @@ exports.typeDefs = gql`
     title: String!
     comment: String!
     rating: Int!
+  }
+
+  input CoursesFilter {
+    discount: Boolean
   }
 `;
